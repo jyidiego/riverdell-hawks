@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_jyidiego_riverdell_hawks_1721238124602-pr-trigger-input-set
+  identifier: Build_jyidiego_riverdell_hawks_1721238124602prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_jyidiego_riverdell_hawks_1721238124602
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
