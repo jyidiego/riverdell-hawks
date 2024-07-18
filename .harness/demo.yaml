@@ -8,7 +8,7 @@ pipeline:
     ci:
       codebase:
         connectorRef: account.Github
-        repoName: riverdell-hawks
+        repoName: jyidiego/riverdell-hawks
         build: <+input>
   stages:
     - stage:
