@@ -1,0 +1,18 @@
+template:
+  name: Docker Build and Push
+  type: Step
+  projectIdentifier: default_project
+  orgIdentifier: default
+  spec:
+    type: BuildAndPushDockerRegistry
+    spec:
+      connectorRef: riverdellhawks
+      repo: jyidiego/riverdell-hawks
+      tags:
+        - latest
+      resources:
+        limits:
+          memory: 1G
+          cpu: 800m
+  identifier: Docker_Build_and_Push
+  versionLabel: "0.1"
