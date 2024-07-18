@@ -45,7 +45,12 @@ pipeline:
                   spec:
                     connectorRef: account.harnessImage
                     image: golang:latest
+                    shell: Sh
                     command: go build
+                    resources:
+                      limits:
+                        memory: 1G
+                        cpu: 1000m
               - step:
                   type: Run
                   identifier: test
@@ -71,3 +76,7 @@ pipeline:
                     repo: jyidiego/riverdell-hawks
                     tags:
                       - latest
+                    resources:
+                      limits:
+                        memory: 1G
+                        cpu: 800m
