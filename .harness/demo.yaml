@@ -68,15 +68,9 @@ pipeline:
                         paths:
                           - report.xml
               - step:
-                  type: BuildAndPushDockerRegistry
                   name: BuildAndPushDockerRegistry_1
                   identifier: BuildAndPushDockerRegistry_1
-                  spec:
-                    connectorRef: riverdellhawks
-                    repo: jyidiego/riverdell-hawks
-                    tags:
-                      - latest
-                    resources:
-                      limits:
-                        memory: 1G
-                        cpu: 800m
+                  template:
+                    templateRef: riverdellimagebuild
+                    versionLabel: "0.1"
+                    gitBranch: main
