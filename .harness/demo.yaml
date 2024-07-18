@@ -1,5 +1,5 @@
 pipeline:
-  name: demo
+  name: BuildTestPush
   identifier: demo
   projectIdentifier: default_project
   orgIdentifier: default
