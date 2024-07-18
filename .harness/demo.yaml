@@ -38,3 +38,19 @@ pipeline:
                     connectorRef: account.harnessImage
                     image: golang:latest
                     command: go get
+              - step:
+                  type: Run
+                  identifier: build
+                  name: Build
+                  spec:
+                    connectorRef: account.harnessImage
+                    image: golang:latest
+                    command: go build
+              - step:
+                  type: Run
+                  identifier: test
+                  name: Test
+                  spec:
+                    connectorRef: account.harnessImage
+                    image: golang:latest
+                    command: go test -v ./...
