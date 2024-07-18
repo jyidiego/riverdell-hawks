@@ -26,5 +26,5 @@ func main() {
 	router := gin.Default()
 	router.GET("/teams", getTeams)
 
-	router.Run("localhost:8080")
+	router.Run(":8080")
 }
