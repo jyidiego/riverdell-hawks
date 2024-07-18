@@ -1,0 +1,7 @@
+namePrefix: harness-
+
+resources:
+- rd-deploy.yml
+- rd-svc.yml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
