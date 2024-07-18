@@ -1,0 +1,14 @@
+inputSet:
+  name: harness
+  identifier: harness
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: demo
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
