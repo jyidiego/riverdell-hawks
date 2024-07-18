@@ -62,3 +62,12 @@ pipeline:
                       spec:
                         paths:
                           - report.xml
+              - step:
+                  type: BuildAndPushDockerRegistry
+                  name: BuildAndPushDockerRegistry_1
+                  identifier: BuildAndPushDockerRegistry_1
+                  spec:
+                    connectorRef: account.harnessImage
+                    repo: jyidiego/riverdell-hawks
+                    tags:
+                      - latest
