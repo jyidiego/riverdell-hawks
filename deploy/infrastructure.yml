@@ -1,0 +1,15 @@
+infrastructureDefinition:
+  name: harness_k8sinfra
+  identifier: harnessk8sinfra
+  description: ""
+  tags: {}
+  orgIdentifier: default
+  projectIdentifier: default_project
+  environmentRef: harnessdevenv
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: minikube
+    namespace: harness-delegate-ng
+    releaseName: release-<+INFRA_KEY>
+  allowSimultaneousDeployments: false
